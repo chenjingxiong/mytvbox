@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>拒绝访问</title>
+<link rel="stylesheet" href="/assets/errors-ee221c781deb714b4d06fc3815cd038dfab486c841ae6abae125bb7985de4f5e.css" />
+<link rel="stylesheet" href="/assets/application-5256453986758209429222be972aa14a2dc5f579dc157c997ac596f847dbd259.css" />
+<link rel="stylesheet" href="/assets/fonts-deb7ad1d55ca77c0172d8538d53442af63604ff490c74acc2859db295c125bdb.css" />
+<link rel="stylesheet" href="/assets/tailwind-68eb87cb0e494a342faedd61a458764b65b780aa51b9d529e15e7be565eab36c.css" />
+</head>
+<body>
+<div class="page-container">
+<div class="holder">
+<img alt="拒绝访问" src="/assets/illustrations/error-401-5bd93bd6f763f1c5caa08d1df09cf1686b3cc62ace0689f71f53b8e115873099.svg" />
+<div class="gl-text-center">
+<h3>
+页面访问受限
+</h3>
+<p>
+抱歉，您没有访问页面的权限
+</p>
+<p>
+您必须先登录极狐GitLab 才能访问此页面
+</p>
+<a class="gl-button btn  btn-confirm " href="/users/sign_in"><span class="gl-button-text">
+登录
+
+</span>
+
+</a><a style="margin-left: 6px" class="gl-button btn  btn-default " href="/"><span class="gl-button-text">
+返回首页
+
+</span>
+
+</a></div>
+</div>
+
+</div>
+<script nonce="Ate6zKtqkEoUQMBIkxpl7A==">
+//<![CDATA[
+(function(){
+  var goBackElement = document.querySelector('.js-go-back');
+
+  if (goBackElement && history.length > 1) {
+    goBackElement.removeAttribute('hidden');
+
+    goBackElement.querySelector('button').addEventListener('click', function() {
+      history.back();
+    });
+  }
+
+  // We do not have rails_ujs here, so we're manually making a link trigger a form submit.
+  document.querySelector('.js-sign-out-link')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('.js-sign-out-form')?.submit();
+  });
+}());
+
+//]]>
+</script></body>
+</html>
